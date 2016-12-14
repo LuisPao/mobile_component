@@ -18,30 +18,17 @@
         position: relative;
     }
     
-    .side {
-        width: 100%;
-        height: 400px;
-        position: absolute;
-        transform: translateX(-100%);
-        z-index: 10;
+    #wrap {
+        height: 100%;
     }
     
     .sideL {
-        height: 100%;
-        width: 70%;
         background-color: yellow;
-        float: left;
-    }
-    
-    .sideR {
-        height: 100%;
-        width: 30%;
-        float: right;
     }
     
     .container {
         width: 100%;
-        height: 400px;
+        height: 100%;
         background-color: rgba(255, 0, 0, .4);
     }
     </style>
@@ -62,10 +49,10 @@
     <script src="js/sideNav.js"></script>
     <script>
     ! function() {
-
         $('#wrap').sideNav({
             'container': '.container',
             'side': '.side',
+            'sideL': '.sideL',
             'sideR': '.sideR',
             'btn': '.btn'
         })

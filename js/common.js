@@ -2,12 +2,12 @@
  * @Author: pao
  * @Date:   2016-12-14 10:04:59
  * @Last Modified by:   pao
- * @Last Modified time: 2016-12-14 11:51:30
+ * @Last Modified time: 2016-12-14 15:30:04
  */
 'use strict';
-! function(window) {
+! function(w) {
 
-    window.mobile = {
+    w.mobile = {
         tap: function($dom, callback) {
             var start = 0;
             var isMoved = false;
