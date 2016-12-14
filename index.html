@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <style>
+    * {
+        margin: 0px;
+        padding: 0px;
+        -webkit-tap-highlight-color: transparent;
+    }
+    
+    html,
+    body {
+        width: 100%;
+        height: 100%;
+        position: relative;
+    }
+    
+    .side {
+        width: 100%;
+        height: 400px;
+        position: absolute;
+        transform: translateX(-100%);
+        z-index: 10;
+    }
+    
+    .sideL {
+        height: 100%;
+        width: 70%;
+        background-color: yellow;
+        float: left;
+    }
+    
+    .sideR {
+        height: 100%;
+        width: 30%;
+        float: right;
+    }
+    
+    .container {
+        width: 100%;
+        height: 400px;
+        background-color: rgba(255, 0, 0, .4);
+    }
+    </style>
+</head>
+
+<body>
+    <div id="wrap">
+        <div class="side">
+            <div class="sideL"></div>
+            <div class="sideR"></div>
+        </div>
+        <div class="container">
+            <button class="btn">按钮</button>
+        </div>
+    </div>
+    <script src="node_modules/zepto/dist/zepto.js"></script>
+    <script src="js/common.js"></script>
+    <script src="js/sideNav.js"></script>
+    <script>
+    ! function() {
+
+        $('#wrap').sideNav({
+            'container': '.container',
+            'side': '.side',
+            'sideR': '.sideR',
+            'btn': '.btn'
+        })
+    }();
+    </script>
+</body>
+
+</html>
